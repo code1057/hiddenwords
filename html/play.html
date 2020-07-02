@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/estiloPlay.css">
+    <script src="https://kit.fontawesome.com/8491c5a4e2.js" crossorigin="anonymous"></script>
+    <title>Play</title>
+</head>
+<body>
+    <header>
+        <div class="logo"><a href="#"><i class="fas fa-brain"></i> <p>Hidden Words</p></a></div>
+        <nav>
+            <ul class="menu-nav">
+                <div class="content-li"><li><a href="../index.html">Inicio</a></li></div>
+                <div class="content-li"><li><a href="#">Hidden Words Game</a></li></div>    
+            </ul>
+        </nav>
+        <div class="social"><i class="fas fa-bars"></i></div>        
+    </header>
+    <main>
+        <section class="playAhorcado-content">
+            <img src="../img/img2.svg" id="img2">
+            <div class="hidden-word"><p id="p1"></p><p id="p2"></p></div>
+            <form class="form-letter" id="form-letter">
+                <input type="text" name="letter" id="letter">
+                <button type="reset" onclick="letterType()">Ingresar letra</button>
+            </form>
+            <p id="errorMsg"></p>
+            <div class="contator" id="contator"><p>Intentos</p><p id="contator-num"></p></div>
+        </section>
+        <div class="content">
+            <div class="int-content" id="int-content">
+                <h2>Hidden words in knowledge</h2>
+                <a id="btn-begin" onclick="begin()">Begin</a>      
+            </div> 
+            <div class="pistas" id="pistas">
+                <p id="parr1"></p>
+                <p id="parr2"></p>
+                <p id="parr3"></p>
+            </div>        
+        </div>
+    </main>
+    <script src="../JS/scriptAhorcado.js"></script>
+    <script src="../JS/words.js"></script>
+</body>
+</html>

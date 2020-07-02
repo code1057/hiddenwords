@@ -1,0 +1,290 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    width: 100%;
+    height: 100vh;
+    font-family: sans-serif;
+}
+h2{
+    font-size: 50px;
+}
+/*----- ESTILOS PARA EL MENU DE NAVEGACIÓN------------------------ (1)*/
+header{
+    display: flex;
+    width: 100%;
+    height: 10vh;
+    justify-content: space-between;
+    background-color: #fff;
+    border-bottom: 2px solid transparent;
+    box-shadow: 3px 2px 5px rgba(0,0,0,.5);
+}
+.logo{
+    margin-left: 10%;
+    width: 250px;
+    height: 100%;
+    text-align: center;
+    display: flex;
+    align-items: center;
+}
+.logo  a{
+    font-size: 60px;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: black;
+}
+.logo p{
+    font-size: 25px;
+    margin: 0 10px;
+}
+nav{
+    margin-left: -150px;
+    display: flex;
+    justify-content: center;
+}
+.menu-nav{
+    width: 900px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    list-style: none;
+}
+.content-li{
+    width: 50%;
+    display: flex;
+    justify-content: center;
+}
+.menu-nav .content-li li{
+    padding: 10px 40px;
+    font-size: 20px;
+    font-family: sans-serif;
+}
+.menu-nav .content-li li a{
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: black;
+}
+.menu-nav>.content-li>li>a:hover{
+    padding: 0 20px;
+    color: seagreen;
+    text-shadow: 2px 2px 5px rgba(0,0,0,.5);
+    border-right: 1px solid #000;
+    border-left: 1px solid #000;
+}
+.social{
+    display: none;
+    width: 80px;
+    height: 100%;
+    font-size: 40px;
+    line-height: 80px;
+    text-align: center;
+}
+/*------- ESTILOS PARA CONTENEDOR DE MAIN --------------------------(2)-----*/
+main{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.content{
+    width: 45%;
+    height: 90vh;
+    display: flex;
+    justify-content: center;
+    flex-flow: column nowrap;
+    align-items: center;
+    overflow: hidden;
+}
+.int-content{
+    margin-top: 10px;
+    max-width: 800px;
+    height: 200px;
+    display: flex;
+    flex-flow: column nowrap;
+    /*justify-content: center;*/
+    font-size: 20px;
+    animation: animate1 1s;
+    text-align: center;
+    align-items: center;
+    transform: translateY(100%);
+    transition: 1s;
+}
+.int-content a{
+    width: 250px;
+    height: 60px;
+    line-height: 60px;
+    text-align: center;
+    color: #fff;
+    text-decoration: none;
+    background-color: seagreen;
+    margin: 10px 0;
+    letter-spacing: 2px;
+    font-weight: 900;
+}
+.int-content a:hover{       
+    color: seagreen;
+    background-color: rgba(46,139,87, .3);
+    border: 1px solid #000;
+    transition: 0.7s;
+    cursor: pointer;
+}
+@keyframes animate1{
+    0%{
+        opacity: 0;
+        transform: translateY(-40%);
+    }100%{
+        opacity: 1;
+    }
+}
+/*------------- PLAYAHORCADO CONTENT ------------------------------------*/
+.playAhorcado-content{
+    border: 2px solid #000;
+    width: 45%;
+    height: 500px;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-around;
+    align-items: center;
+    overflow: hidden;
+    position: relative;
+}
+#img2{
+    width: 100%;
+    height: 100%;
+    opacity: 1;
+    transition: 1s;
+}
+.playAhorcado-content p{
+    font-size: 30px;
+    padding: 10px 0;
+}
+.form-letter{
+    display: none;
+    justify-content: center;
+    align-items: center;
+    flex-flow: column nowrap;
+}
+.form-letter input{
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    border-radius: 5px;
+}
+.form-letter button{
+    width: 200px;
+    height: 60px;
+    margin: 20px 0;
+    text-transform: uppercase;
+    border-radius: 2px;
+    background-color: seagreen;
+    color: #fff;
+    letter-spacing: 2px;
+    font-weight: 700;
+    font-size: 15px;
+}
+.form-letter button:hover{
+    cursor: pointer;
+}
+.contator{
+    opacity: 0;
+    position: absolute;
+    right: 10px;
+    bottom: 10px;
+    width: 100px;
+    height: 100px;
+    background-color: lightseagreen;
+    border-radius: 50%;
+    transition: 1s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: column nowrap;
+}
+.contator > p{
+    font-size: 18px;
+}
+#contator-num{
+    font-size: 20px;
+    font-weight: 700;
+}
+
+/*------------ CSS STYLE FOR PISTAS -----------------------------------------------------------------*/
+.pistas{
+    max-width: 800px;
+    height: 500px;
+    display: flex;
+    flex-flow: column nowrap;
+    font-size: 20px;
+}
+.pistas p{
+    padding: 20px 20px;
+    opacity: 0;
+    transition: 1s;
+}
+/*------------------ STYLE FOR RESPONSIVE DESIGN -----------------------------------------------------*/
+@media screen and (max-width:1400px){
+    .logo{
+        width: 50%;
+    }
+    nav{
+        width: 50%;  
+        display: flex;
+        justify-content: center;
+    }
+    .menu-nav .content-li li{
+        padding: 0 10px;
+    }
+    .menu-nav .content-li li a{
+        letter-spacing: normal;
+        text-transform: none;
+    }  
+    /*----------CSS PISTAS ------------------------------------------------------------------------------*/
+    main{
+        flex-flow: column nowrap;
+    }
+    .playAhorcado-content{
+        width: 80%;
+        height: 300px;       
+    }
+    .content{
+        width: 80%;
+    }
+    .int-content{
+        height: 100px;
+        transform: translateY(0);
+    }
+    .int-content > H2{
+        font-size: 20px;
+    }
+    .int-content > a{
+        background-color: lightseagreen;
+        height: 40px;
+        width: 200px;
+        line-height: 40px;
+    }
+    .pistas{
+        width: 100%;
+        max-width: 100%;
+        flex-flow: row nowrap;
+        justify-content: space-around;
+    }
+    .pistas p{
+        max-width: 380px;
+        text-align: justify;
+    }
+    
+}
+@media screen and (max-width:860px){
+    .logo{
+        margin: 0;
+        width: 30%;
+    }
+    .menu-nav{
+        width: 70%;
+        flex: 1 4;
+    }
+}
+
